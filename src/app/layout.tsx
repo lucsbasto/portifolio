@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Poppins, Sora } from 'next/font/google';
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import TopLeftImg from "./components/TopLeftImg";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const sora = Sora({
+  subsets: ['latin'],
+  variable: '--font-sora',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+})
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} font-poppins relative`}>
+      <TopLeftImg/>
+        <Nav/>
+        <Header/>
         {children}
       </body>
     </html>
