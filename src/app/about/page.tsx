@@ -2,7 +2,7 @@
 import Brain from "@/components/Brain";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import Biography from "./components/biography";
+import Biography from "./components/Biography";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 
