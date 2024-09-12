@@ -1,11 +1,11 @@
 import React from 'react'
 
-const CardLeft: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <div className={""}>
-      CardLeft
+      Contact
     </div>
   )
 }
 
-export default CardLeft
+export default Contact

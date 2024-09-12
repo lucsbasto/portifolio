@@ -1,11 +1,11 @@
 import React from 'react'
 
-const CardLeft: React.FC = () => {
+const Portfolio: React.FC = () => {
   return (
     <div className={""}>
-      CardLeft
+      Portfolio
     </div>
   )
 }
 
-export default CardLeft
+export default Portfolio
