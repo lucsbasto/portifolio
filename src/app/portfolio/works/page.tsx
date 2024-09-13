@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 const items = [
   {
@@ -64,7 +63,7 @@ function Works({ x}: {x: any}) {
       animate={{y:0}} 
       transition={{ duration: 1}} 
       className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          My Works
+          Projetos
         </motion.div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -85,9 +84,9 @@ function Works({ x}: {x: any}) {
                     <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                       {item.desc}
                     </p>
-                    <Link href={item.link} className="flex justify-end">
+                    {/* <Link href={item.link} className="flex justify-end">
                       <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded-md">See Demo</button>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
