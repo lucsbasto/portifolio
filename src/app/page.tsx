@@ -16,14 +16,12 @@ export default function Home() {
         </div>
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Crafting Digital Experiences, Designing Tomorrow.
+            Building Scalable Solutions, Shaping the Future.
           </h1>
           <p className="md:text-lg">
-            Welcome to my digital canvas, where innovation and
-            creativity converge. With a keen eye for aesthetics and
-            a mastery of code, my portfolio showcases a diverse
-            collection of projects that reflect my commitment to
-            excellence.
+            Welcome to my tech-driven space, where clean code and powerful architecture come together. 
+            With a passion for performance and innovation, my work spans across projects that impact millions, 
+            always with a focus on delivering excellence.
           </p>
           <div className=" w-full flex gap-4">
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">View My Work</button>
