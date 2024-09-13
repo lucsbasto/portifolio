@@ -3,14 +3,8 @@ const nextConfig = {
   output: 'export',
   images: { 
     unoptimized: true,
-    // loader: 'custom',
-    // loaderFile: './loader.ts',
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'hostgator.com.br'
-      }
-    ]
+    loader: 'custom',
+    loaderFile: './loader.ts'
    } 
 };
 

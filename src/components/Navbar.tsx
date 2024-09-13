@@ -93,12 +93,12 @@ export function Navbar() {
       {/* LOGO */}
       <div className="md:hidden lg:flex xl:justify-center">
       <Link href='/' className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
-        <span className="text-white mr-1">Lucs</span>
+        <span className="text-white mr-1 flex items-center justify-center">Lucs</span>
         <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">Basto</span>
       </Link>
       </div>
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4  w-1/3">
+      <div className="hidden md:flex gap-4 w-1/3 justify-end">
       {
         socialMedias.map((media, index) => (
         <Link target="blank"  key={index} href={media.url}>
@@ -145,7 +145,6 @@ export function Navbar() {
           </motion.div>
             )
           }
-         
       </div>
     </div>
   )
