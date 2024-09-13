@@ -6,7 +6,7 @@ import Biography from "./components/Biography";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 
-const AboutPage = () => {
+const About = () => {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ container: containerRef })
@@ -33,4 +33,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;

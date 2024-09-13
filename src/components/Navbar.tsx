@@ -6,13 +6,27 @@ import { useState } from "react"
 import NavLink from "./NavLink"
 const links = [
   {url: '/', title: 'Home'},
-  {url: '/about', title: 'About'},
-  {url: '/portfolio', title: 'Portfolio'},
-  {url: '/contact', title: 'Contact'},
+  {url: '/about', title: 'Sobre'},
+  {url: '/portfolio', title: 'Portifolio'},
+  {url: '/contact', title: 'Contato'},
+]
+
+const socialMedias = [
+  {
+    icon: "/github.png",
+    url: "https://www.github.com/lucsbasto",
+    alt: "github",
+  },
+  {
+    icon: "/linkedin.png",
+    url: "https://www.linkedin.com/in/lucsbasto/",
+    alt: "linkedin",
+  },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+ 
   const topVariants = {
     closed: {
       rotate: 0,
@@ -77,7 +91,7 @@ export function Navbar() {
         }
       </div>
       {/* LOGO */}
-      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
+      <div className="md:hidden lg:flex xl:justify-center">
       <Link href='/' className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
         <span className="text-white mr-1">Lucs</span>
         <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">Basto</span>
@@ -85,29 +99,16 @@ export function Navbar() {
       </div>
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4  w-1/3">
-        <Link href={"#"}>
-          <Image src="/github.png" alt="github" width={24} height={24}/>
+      {
+        socialMedias.map((media, index) => (
+        <Link target="blank"  key={index} href={media.url}>
+          <Image src={media.icon} alt={media.alt} width={24} height={24}/>
         </Link>
-        <Link href={"#"}>
-          <Image src="/dribbble.png" alt="dribbble" width={24} height={24}/>
-        </Link>
-        <Link href={"#"}>
-          <Image src="/instagram.png" alt="instagram" width={24} height={24}/>
-        </Link>
-        <Link href={"#"}>
-          <Image src="/facebook.png" alt="facebook" width={24} height={24}/>
-        </Link>
-        <Link href={"#"}>
-          <Image src="/pinterest.png" alt="pinterest" width={24} height={24}/>
-        </Link>
-        <Link href={"#"}>
-          <Image src="/linkedin.png" alt="linkedin" width={24} height={24}/>
-        </Link>
+        ))
+      } 
       </div>
-      {/* RESPONSIVE MENU */}
       <div className="md:hidden">
-          {/* MENU BUTTON */}
-          <button      className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          <button className="w-10 h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setIsOpen((prev) => !prev)}>
             <motion.div
             variants={topVariants}
@@ -125,7 +126,6 @@ export function Navbar() {
             className="w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
           </button>
-          {/* MENU LIST */}
           {
             isOpen && (
               <motion.div
