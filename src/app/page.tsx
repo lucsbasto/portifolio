@@ -16,16 +16,15 @@ export default function Home() {
         </div>
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Building Scalable Solutions, Shaping the Future.
+            Construindo Soluções Escaláveis. Moldando o Futuro.
           </h1>
           <p className="md:text-lg">
-            Welcome to my tech-driven space, where clean code and powerful architecture come together. 
-            With a passion for performance and innovation, my work spans across projects that impact millions, 
-            always with a focus on delivering excellence.
+          Bem-vindo ao meu espaço tecnológico, onde código limpo e arquitetura robusta se unem. 
+          Com paixão por desempenho e inovação, meu trabalho abrange projetos de grande impacto, sempre com o objetivo de entregar excelência
           </p>
           <div className=" w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">View My Work</button>
-            <button className="p-4 rounded-lg ring-1 ring-black">Contact Me</button>
+            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">Conheça meu Trabalho</button>
+            <button className="p-4 rounded-lg ring-1 ring-black">Entre em Contato</button>
           </div>
         </div>
       </div>

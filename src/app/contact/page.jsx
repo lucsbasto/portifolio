@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
+  const text = "Fale Comigo! ";
 
   const form = useRef();
 
@@ -44,7 +44,7 @@ const ContactPage = () => {
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
-            {text.split("").map((letter, index) => (
+          {(!success && !error) && text.split("").map((letter, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 1 }}
@@ -58,41 +58,44 @@ const ContactPage = () => {
                 {letter}
               </motion.span>
             ))}
-            😊
+            {(!success && !error) && (<> 😊</>) }
+            {
+              success && (
+                <span className="text-4xl">
+                  Sua mensagem foi enviada com sucesso! 🚀
+                </span>
+              )
+            }
+            {
+              error && (
+                <span className="text-4xl">
+                  Algo deu errado, tente novamente! 😢
+                </span>
+              )
+            }
           </div>
         </div>
-        {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
           ref={form}
           className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
         >
-          <span>Dear Lama Dev,</span>
+          <span>Hey Lucas,</span>
           <textarea
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />
-          <span>My mail address is:</span>
+          <span>Meu email é:</span>
           <input
             name="user_email"
             type="text"
             className="bg-transparent border-b-2 border-b-black outline-none"
           />
-          <span>Regards</span>
+          <span>Abraços</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
+            Enviar
           </button>
-          {success && (
-            <span className="text-green-600 font-semibold">
-              Your message has been sent successfully!
-            </span>
-          )}
-          {error && (
-            <span className="text-red-600 font-semibold">
-              Something went wrong!
-            </span>
-          )}
         </form>
       </div>
     </motion.div>
