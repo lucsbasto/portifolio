@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -23,8 +24,8 @@ export default function Home() {
           Com paixão por desempenho e inovação, meu trabalho abrange projetos de grande impacto, sempre com o objetivo de entregar excelência
           </p>
           <div className=" w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">Conheça meu Trabalho</button>
-            <button className="p-4 rounded-lg ring-1 ring-black">Entre em Contato</button>
+            <Link className="p-4 rounded-lg ring-1 ring-black bg-black text-white" href="/portfolio">Conheça meu Trabalho</Link>
+            <Link className="p-4 rounded-lg ring-1 ring-black"  href="/contact">Entre em Contato</Link>
           </div>
         </div>
       </div>

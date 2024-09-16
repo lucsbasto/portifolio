@@ -1,3 +1,4 @@
+"use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -84,9 +85,6 @@ function Works({ x}: {x: any}) {
                     <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                       {item.desc}
                     </p>
-                    {/* <Link href={item.link} className="flex justify-end">
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded-md">See Demo</button>
-                    </Link> */}
                   </div>
                 </div>
               </div>
